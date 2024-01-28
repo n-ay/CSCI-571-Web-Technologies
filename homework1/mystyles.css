@@ -144,3 +144,36 @@ body{
     font-size: 54px;
 
   }
+
+  .arrowContainer{
+    display: flex;
+    align-items: center;
+  }
+
+  .arrowLeft,
+  .arrowRight{
+    display: inline-block;
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid rgb(168, 147, 87);
+    border-left: 2px solid rgb(168, 147, 87);
+    transform-origin: center;
+  }
+
+  .arrowLeft{
+    transform: rotate(-45deg);
+  }
+
+  .arrowRight{
+    transform: rotate(135deg);
+  }
+  .arrowLeft::after,
+  .arrowRight::after {
+     content: "";
+     display: block;
+     width: 2px;
+     height: 45px;
+     background-color: rgb(168, 147, 87);
+     transform: rotate(-45deg) translate(15px, 4px);
+  }
