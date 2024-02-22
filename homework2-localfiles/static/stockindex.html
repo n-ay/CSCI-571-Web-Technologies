@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/static/stockcss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<title>Homework 2</title>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/static/stockjs.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+
+<!-- ******************************************************************** -->
+
+<!-- ISSUES TO FIX IN THE CODE: -->
+
+<!-- 5. STORE API KEYS IN .ENV FILE -->
+<!-- 6. CHECK RESPONSE CODE ERROR HANDLING -->
+
+<!-- DOUBLE CHECK THE FOLLOWING:  -->
+<!-- !!!!! CHECK FONT, CHECK SIZES!!!!! -->
+
+<!-- ******************************************************************** -->
+
+
+
+<div class="titleOfPage"> Stock Search </div>
+
+<div class="wrapSearchBar">
+    <form id="search-form">
+        <button type="submit" class="searchButton" id="search-button"></button>
+        <input type="text" class="searchTerm" id="symbol_input" name="symbol" placeholder="Enter Stock Ticker Symbol" required pattern="\w+" autocomplete="off">
+        <!-- <hr style="width: 0px; transform: rotate(180deg); height: 42px; color: #f8f9fa; outline: none; opacity: 20%; margin-left: 112%;" />     -->
+        <!-- opacity: 20%; position: relative; top: 26px; left: 500px; margin-top:-33%; -->
+        <button type="button" class="cancelButton" id="cancel-button"></button>
+    </form>
+</div>
+
+
+ <div class="topnav-bar">
+    <a class="tabStatus"  id="summary-tab">Company</a>
+    <a class="tabStatus" id="stock-tab">Stock Summary</a>
+    <a class="tabStatus" id="chart-tab">Chart</a>
+    <a class="tabStatus" id="news-tab">Latest News</a>
+  </div>
+ 
+
+  <div class="DisplayBox" id="summary"></div>
+  <div class="DisplayBox" id="stock"></div>
+  <div class="DisplayBox" id="chart"></div>
+  <div class="DisplayBox" id="news"></div>
+  <div id="error-box" style="display: none; height: 20px; width: 600px; text-align: center; padding: 20px; border-radius: 0.8rem; background-color: #eaeaea; font-size: 18px; margin-left: 33%; margin-top: 18%;">Error: No record has been found, please enter a valid symbol</div>
+  
+  
+</body>
+</html>
